@@ -196,7 +196,7 @@ public int makeMove(JButton[] buttons) {
 
 2. Clone the repository:
 ```bash
-git clone [https://github.com/MandeaMarian/-Personal-Projects-.git](https://github.com/MandeaMarian/-Personal-Projects-)
+git clone https://github.com/MandeaMarian/-Personal-Projects-.git
 ```
 3. Navigate to the project directory:
 ```bash
