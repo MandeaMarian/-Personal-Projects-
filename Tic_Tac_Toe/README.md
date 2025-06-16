@@ -94,7 +94,7 @@ public int makeMove(JButton[] buttons) {
 }
 ```
 
-###SmartBot
+### SmartBot
 **Strategy:** Basic tactical play.
 
 **Behavior:**
@@ -123,7 +123,7 @@ public int makeMove(JButton[] buttons) {
 }
 ```
 
-###ImpossibleBot
+### ImpossibleBot
 **Strategy:** Perfect Tic-Tac-Toe algorithm (based on the Minimax algorithm principles).
 
 **Key Features:**
