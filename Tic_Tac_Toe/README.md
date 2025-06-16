@@ -92,7 +92,7 @@ public int makeMove(JButton[] buttons) {
     }
     return emptyCells.isEmpty() ? -1 : emptyCells.get(random.nextInt(emptyCells.size()));
 }
-
+```
 
 ###SmartBot
 **Strategy:** Basic tactical play.
@@ -121,7 +121,7 @@ public int makeMove(JButton[] buttons) {
     ArrayList<Integer> emptyCells = new ArrayList<>();
     // ... random selection logic
 }
-
+```
 
 ###ImpossibleBot
 **Strategy:** Perfect Tic-Tac-Toe algorithm (based on the Minimax algorithm principles).
@@ -140,14 +140,37 @@ public int makeMove(JButton[] buttons) {
 ```java
 public int makeMove(JButton[] buttons) {
     // 1. Check for immediate win
+    int winningMove = findWinningMove(buttons, "O");
+    if (winningMove != -1) return winningMove;
+
     // 2. Block opponent's win
+    int blockingMove = findWinningMove(buttons, "X");
+    if (blockingMove != -1) return blockingMove;
+
     // 3. Create fork opportunities
+    int forkMove = createFork(buttons);
+    if (forkMove != -1) return forkMove;
+
     // 4. Block opponent's fork
+    int blockForkMove = blockPotentialFork(buttons);
+    if (blockForkMove != -1) return blockForkMove;
+
     // 5. Take center
+    if (buttons[4].getText().isEmpty()) return 4;
+
     // 6. Take opposite corner
+    int oppositeCorner = takeOppositeCorner(buttons);
+    if (oppositeCorner != -1) return oppositeCorner;
+
     // 7. Take empty corner
+    int oppositeCorner = takeOppositeCorner(buttons);
+    if (oppositeCorner != -1) return oppositeCorner;
+
     // 8. Take empty side
+    return getEmptySide(buttons)
+
 }
+```
 
 ---
 
@@ -172,21 +195,21 @@ public int makeMove(JButton[] buttons) {
 1. Ensure Java JDK is installed on your system (JDK 8 or later).
 
 2. Clone the repository:
-
-git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
-
+```bash
+git clone [https://github.com/MandeaMarian/-Personal-Projects-.git](https://github.com/MandeaMarian/-Personal-Projects-)
+```
 3. Navigate to the project directory:
-
+```bash
 cd your-repo
-
+```
 4. Compile all .java files:
-
+```bash
 javac *.java
-
+```
 5. Run the main class:
-
+```bash
 java Main
-
+```
 **Controls**
 - Click any empty cell to make a move.
 - Click "Play Again" to reset the current game.
