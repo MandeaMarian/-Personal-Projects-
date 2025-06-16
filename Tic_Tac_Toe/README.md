@@ -174,7 +174,7 @@ public int makeMove(JButton[] buttons) {
 
 ---
 
-##Tehnical Implementation
+## Technical Implementation
 
 **Class Structure**
 - Main.java: Entry point for the application.
@@ -191,7 +191,7 @@ public int makeMove(JButton[] buttons) {
 
 ---
 
-##How to Run
+## How to Run
 1. Ensure Java JDK is installed on your system (JDK 8 or later).
 
 2. Clone the repository:
